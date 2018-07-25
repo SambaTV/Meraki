@@ -17,3 +17,8 @@
 3. Run Powershell Commands/scripts 
 4. Customize scripts
 
+# Configure GAM for JumpCloud
+1. Download GAM
+2. Configure GAM
+3. Run GAM
+4. GAM API communicate with JC
