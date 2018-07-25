@@ -10,4 +10,12 @@
          Set-JCUser -Username superman -ldap_binding_user $True
    ## *Help
          Help New-JCUser -Online
-
+   
+# Delete User
+   ## Remove User
+         Remove-JCUser superman
+         //Remove commands remove objectsor associations between objects.
+         Y
+         
+         //To skip the default warning when running a Remove command use the '-force- parameter
+         Remove-JCUser superman -force
