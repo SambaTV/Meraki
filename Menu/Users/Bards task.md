@@ -1,4 +1,5 @@
-# Add New User
+# Add New User 
+Superman Example
      
    ## Create New User
          New-JCUser -firstname Clark -lastname Kent -username superman -email clark.kent@samba.tv
