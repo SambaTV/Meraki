@@ -8,6 +8,6 @@
             // Adds the user 'superman' to the user group 'SFO'
    ## Enable as LDAP Bind DN
          Set-JCUser -Username superman -ldap_binding_user $True
-   ## Help
+   ## *Help
          Help New-JCUser -Online
 
