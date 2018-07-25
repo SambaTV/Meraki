@@ -51,7 +51,7 @@
       gam user a_user@example.com check serviceaccount  
         -> It may take a few minutes after authorizing the scopes for all tests to PASS. If you've confirmed the Client name and scopes are listed properly on the website, grab a coffee and then try again.
         -> That's it! GAM is now setup and ready to run.
-        **Note** : If you're getting a 401 error "client not found" from Google OAuth Authorisation, please check that the client_secrets.json file inside your gam directory matches your GSuite API client id and customer secrets (recursive creation of projects creates new files on the filesystem instead of overwriting the default one)
+        __Note__ : If you're getting a 401 error "client not found" from Google OAuth Authorisation, please check that the client_secrets.json file inside your gam directory matches your GSuite API client id and customer secrets (recursive creation of projects creates new files on the filesystem instead of overwriting the default one)
 
   ## Running GAM for the First Time
 
