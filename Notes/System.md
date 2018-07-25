@@ -1,4 +1,5 @@
-# Add a system
+## Add a system
 
-  To bind a system to JumpCloud
+  # To bind a system to JumpCloud
     -> Install JC agent on system
+    
