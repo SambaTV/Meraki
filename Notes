@@ -1,4 +1,32 @@
-The username field is Hard-coded(once configured, can not be changed) when a new user is saved. 
--> pushed to a machine when a user is bound to a system 
+# Username field
 
-NOTE
+  The username field is Hard-coded(once configured, can not be changed) when a new user is saved. 
+    -> the username is pushed to a machine when a user is bound to a system 
+
+  NOTE 
+  If username field of existing account on a previous workstation matches the username field on JC
+    -> the agent will take over the account and it will be manageable from JC admin console
+
+  Mismatch = BAD
+    ex) steve.jobs vs sjobs
+
+
+#User email
+
+  Can be updated after account is created
+
+  Office 365 or G Suite?
+    -> Directory sync feature
+      (Allows JC to view password authority for only accounts admin specifies)
+      
+      How to leverage Directory Sync Feature?
+        1. Authorize the directory sync
+          (this is done in the Directories Tab)
+        2. Once authorized, import users in bulk directly through this integration
+          * additional info ( support.jumpCloud.com ) 
+          
+          
+#Add a system
+
+  To bind a system to JumpCloud
+    -> Install JC agent on system
