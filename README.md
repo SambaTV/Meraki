@@ -1,8 +1,9 @@
-# JumpCloud-API---
+# JumpCloud-API
 
 # Evaluating the JumpCloud platform
 1. Adding Users & Systems
 2. Groups
+(^ These items are necessary to interact with and leverage other more advanced features of JC)
 
 # JumpCloud API for Python //Didn't work 
 
