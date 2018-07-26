@@ -14,8 +14,16 @@
      Add-JCUserGroupMember -GroupName SambaTV -username rickandmorty
      Add-JCUserGroupMember -GroupName SambaTV -username themagicians 
      Add-JCUserGroupMember -GroupName SambaTV -username thelastmanonearth
+  
+    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(1) -returnProperties username, created | Select Username -Unique | Foreach {JCUser -GroupName SambaTV}
+    
+   //get users that were added today, return users, select unique users, for each user add to group
+    
+   **Note** useful for duplicate results, it only does one
+      
+      Select Department -Unique 
  
- ## Remove LDAP | Create and add them to 'TV Characters' group
+  ## Remove LDAP | Create and add them to 'TV Characters' group
   
   ## group them together Give them LDAP in same script 
        
