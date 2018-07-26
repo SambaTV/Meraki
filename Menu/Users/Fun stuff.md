@@ -1,0 +1,5 @@
+Get-JCUser | Get-Member
+Displays all properties of a JumpCloud user object
+
+Get-JCUser -returnProperties username, email 
+Uses the pipeline and the parameter '-returnProperties' to return the username and email for all JumpCloud users in an organization
