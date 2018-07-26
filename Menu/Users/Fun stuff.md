@@ -24,7 +24,20 @@ Selects unique departments
     Get-ADuser -Filter {Department -ne "$null"} -Properties * | Select Department -Unique
     
    For each !!!!!!
-   ### User property -> User Group
+   **User property -> User Group**
    
     Get-ADuser -Filter {Department -ne "$null"} -Properties * | Select Department -Unique | Foreach {New-JCUserGroup -GroupName $_.Department}
+    
+  ## Exporting User Information To CSV
+
+ Backs up JumpCloud user information to CSV. A CSV backup file containing all user information will be created within the current working directory when this command is run.
+     
+     Get-JCBackup -Users
+
+
+ Uses the parameter '-filterDateProperty' which creates the two dynamic parameters '-dateFilter' and '-date' to return users that were created in the last 7 days and exports their 'username', 'created date', and 'email' to the CSV 'NewUsers.csv'.
+     
+     Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-7) -returnProperties username, created, email | Export-Csv NewUsers.csv
+     
+
 
