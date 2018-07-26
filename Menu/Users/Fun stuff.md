@@ -1,3 +1,5 @@
+## Fun Stuff
+
 Displays all properties of a JumpCloud user object
    
     Get-JCUser | Get-Member
