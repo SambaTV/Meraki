@@ -17,4 +17,14 @@ Search filter for all disabled ldap users
 Adds all JumpCloud users that have the custom attribute 'Department' set with a value of 'Sales' to the group 'Sales'
     
     Get-JCUser | ? attributes  -Like '*name=Department; value=Sales;*' | Add-JCUserGroupMember -GroupName Sales
+    
+   
+Selects unique departments
+    
+    Get-ADuser -Filter {Department -ne "$null"} -Properties * | Select Department -Unique
+    
+   For each !!!!!!
+   ### User property -> User Group
+   
+    Get-ADuser -Filter {Department -ne "$null"} -Properties * | Select Department -Unique | Foreach {New-JCUserGroup -GroupName $_.Department}
 
