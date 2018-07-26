@@ -17,6 +17,11 @@
 3. Run Powershell Commands/scripts 
 4. Customize scripts
 
+# JC Active Directory Bridge 
+1. Create 'Read All' User
+2. Install AD Bridge Agent on domain controllers
+3. Create Two Security Groups
+
 # Configure GAM for JumpCloud
 1. Download GAM
 2. Configure GAM
