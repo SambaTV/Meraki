@@ -15,9 +15,9 @@
      Add-JCUserGroupMember -GroupName SambaTV -username themagicians 
      Add-JCUserGroupMember -GroupName SambaTV -username thelastmanonearth
   
-    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(1) -returnProperties username, created | Select Username -Unique | Foreach {JCUser -GroupName SambaTV}
+   * Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(1) -returnProperties username, created | Select Username -Unique | Foreach {JCUser -GroupName SambaTV} * FAILED
     
-   //get users that were added today, return users, select unique users, for each user add to group
+   //get users that were added today, return users, select unique users, for each user add to group 'AllUsers'
     
    **Note** useful for duplicate results, it only does one
       
