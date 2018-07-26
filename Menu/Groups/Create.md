@@ -11,6 +11,8 @@
   ### GoU
   2. Create group name
   3. Select users to add to GoU
+  
+    New-JCUserGroup 'TV Characters'
 
 ## Bind GoU to GoS 
   -> This allows GoU to be added as users on all GoS
