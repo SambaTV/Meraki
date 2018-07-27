@@ -81,4 +81,6 @@ _id                            : 5b5aafe3c73401685bf3fcb9
 
 ## Create UserGroup add multiple Users
     Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-1) -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName TV Characters
+    
+    New-JCUserGroup 'TV Characters'
    // Get Users that have been added on 07/26/2018, adds them to TV Characters 
