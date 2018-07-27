@@ -80,5 +80,5 @@ _id                            : 5b5aafe3c73401685bf3fcb9
 ### Departure Day, script
 
 ## Create UserGroup add multiple Users
-    Get-JCUser -filterDateProperty created -dateFilter after -date 07/26/2018 -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName TV Characters
+    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-1) -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName AllUsers
    // Get Users that have been added on 07/26/2018, adds them to TV Characters 
