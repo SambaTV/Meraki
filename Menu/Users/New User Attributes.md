@@ -76,3 +76,5 @@ _id                            : 5b5aafe3c73401685bf3fcb9
 
 ### Location
   *__Location__*
+  
+### Departure Day, script
