@@ -1,4 +1,4 @@
-# Ex User Attributes
+# Ex) User Attributes
 email                          : phil.miller@samba.tv
 username                       : thelastmanonearth
 allow_public_key               : True
