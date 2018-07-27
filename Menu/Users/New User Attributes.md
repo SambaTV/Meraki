@@ -87,4 +87,10 @@ _id                            : 5b5aafe3c73401685bf3fcb9
     Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-1) -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName SambaTV   
     
 ## Get User Group, Assigns Custom Attributes to users in groups.
-   // Get Users that have been added on 07/26/2018, adds them to TV Characters ?
+   Get Users that have been added on 07/26/2018, adds them to TV Characters ?
+        
+       Get-JCUserGroupMember 'TV Characters'
+       
+   Returns all JC users groups
+        
+        Get-JCGroup -type User
