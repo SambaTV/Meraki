@@ -1,3 +1,32 @@
+# Ex User Attributes
+email                          : phil.miller@samba.tv
+username                       : thelastmanonearth
+allow_public_key               : True
+ssh_keys                       : {}
+sudo                           : False
+enable_managed_uid             : False
+unix_uid                       : 5668
+unix_guid                      : 5668
+activated                      : False
+password_expired               : False
+account_locked                 : False
+passwordless_sudo              : False
+externally_managed             : False
+firstname                      : Phil
+lastname                       : Miller
+ldap_binding_user              : True
+enable_user_portal_multifactor : False
+totp_enabled                   : False
+attributes                     : {}
+created                        : 7/27/18 5:38:43 AM
+samba_service_user             : False
+addresses                      : {}
+phoneNumbers                   : {}
+password_never_expires         : False
+_id                            : 5b5aafe3c73401685bf3fcb9
+
+
+
 # User Attributes
   JumpCloud's Custom Attributes enable you to create and store additional data to your users. 
   *Note* Custom Attributes are not yet supported for LDAP, RADIUS or SAML- although will be introduced in further       implementation phases.
@@ -34,8 +63,10 @@
   *__jobTitle__* 
 
 ### EmploymentStatus
-  
+  *__EmploymentStatus__*
 
 ### HireDate
+  *__HireDate__*
 
 ### Location
+  *__Location__*
