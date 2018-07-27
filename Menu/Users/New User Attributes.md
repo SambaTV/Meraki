@@ -60,9 +60,9 @@ _id                            : 5b5aafe3c73401685bf3fcb9
      Set-JCUser -username rickandmorty -NumberOfCustomAttributes 5 -Attribute1_name EmployeeNumber -Attribute1_value 0 -Attribute2_name jobTitle -Attribute2_value I.T. -Attribute3_name EmploymentStatus -Attribute3_value active -Attribute4_name HireDate -Attribute4_value 7/28/18 -Attribute5_name Location -Attribute5_value San Francisco 
     
     //How can i create Custom Attributes in powershell
-    Get-JCUserGroupMember -GroupName 'TvCharacters' | Set-JCUser -NumberOfCustomAttributes 1 -Attribute1_name 'EmployeeNumber' -Attribute1_value '0'
+    Get-JCUserGroupMember -GroupName 'TV Characters' | Set-JCUser -NumberOfCustomAttributes 1 -Attribute1_name 'EmployeeNumber' -Attribute1_value '0'
     
-    //This example either updates or adds the Custom Attribute 'name = EmployeeNumber, value=0' to all JumpCloud Users in the JumpCloud User Group 'TvCharacters'
+    //This example either updates or adds the Custom Attribute 'name = EmployeeNumber, value=0' to all JumpCloud Users in the JumpCloud User Group 'TV Characters'
     
      
 ### jobTitle
@@ -80,4 +80,5 @@ _id                            : 5b5aafe3c73401685bf3fcb9
 ### Departure Day, script
 
 ## Create UserGroup add multiple Users
-    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-1) -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName AllUsers
+    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-2) -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName TV Characters
+   // Get Users that have been added in last 2 days, adds them to TV Characters 
