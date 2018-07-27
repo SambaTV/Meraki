@@ -12,23 +12,30 @@
       
    2. For each custom attribute specified there are two parameters that populate the  _-Attribute#name_ and the _-Attribute#value_. 
    
-     Set-JCUser -username bobby
+     Set-JCUser -username bobby.boy -NumberOfCustomAttributes 2 -Attribute1_name Department -Attribute1_value Dev -Attribute2_name Location -Attribute2_value Boulder
    
    // _NumberOfCustomAttributes_ is set to **2** so a total of four additional parameters must be populated.If this number was set to **1** there would only be two parameters to populate and if it was se **3** there would be a total of six.
    
     
-   Employee#
+### Employee#
+ 
+     Set -NumberOfCustomAttributes 1 -Attribute1_name Department -Attribute1_value Dev
 
-  displayName
+### displayName
+  DisplayName(BambooHR) = Username(JumpCloud)
 
- firstName
+### firstName
+  firstName = firstname
 
-lastName
+### lastName
+ lastName = lastname
 
-jobTitle
+### jobTitle
+  *__jobTitle__* 
 
-EmploymentStatus
+### EmploymentStatus
+  
 
-HireDate
+### HireDate
 
-Location
+### Location
