@@ -103,7 +103,7 @@ _id                            : 5b5aafe3c73401685bf3fcb9
        Get-JCUserGroupMember -GroupName 'TV Characters' | Set-JCUser -NumberOfCustomAttributes 1 -Attribute1_name 'EmployeeNumber' -Attribute1_value '0' 
       //Group
    
-   Returns username and email of specific attributes.
+   Returns attribute of user.
         
         Get-JCUser rickandmorty -returnProperties attributes
         
