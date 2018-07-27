@@ -44,7 +44,7 @@ _id                            : 5b5aafe3c73401685bf3fcb9
      Set-JCUser -username bobby.boy -NumberOfCustomAttributes 2 -Attribute1_name Department -Attribute1_value Dev -Attribute2_name Location -Attribute2_value Boulder
    
    // _NumberOfCustomAttributes_ is set to **2** so a total of four additional parameters must be populated.If this number was set to **1** there would only be two parameters to populate and if it was se **3** there would be a total of six.
-  
+   
   ### displayName
   DisplayName(BambooHR) = Username(JumpCloud)
 
@@ -78,3 +78,6 @@ _id                            : 5b5aafe3c73401685bf3fcb9
   *__Location__*
   
 ### Departure Day, script
+
+## Create UserGroup add multiple Users
+    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-1) -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName AllUsers
