@@ -18,14 +18,29 @@
    * Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(1) -returnProperties username, created | Select Username -Unique | Foreach {JCUser -GroupName SambaTV} * FAILED
     
    //get users that were added today, return users, select unique users, for each user add to group 'AllUsers'
+   *I contacted JumpCloud directly for this issue 
+   Jason Katz replied:
+Hi Rodney,
+
+Test this command out by omitting the last part in bold there to verify you’re grabbing the correct users, 
+    
+    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-1) -returnProperties username, created | Select Username -Unique
+ then go ahead and append the command with the last part again to add them to your group.
+    
+    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-1) -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName AllUsers
+    
+
+It should work, but you may need to play around/test the parameters a bit to get it just right.
+   
+   
     
    **Note** useful for duplicate results, it only does one
       
       Select Department -Unique 
  
-  ## Remove LDAP | Create and add them to 'TV Characters' group
   
-  ## group them together Give them LDAP in same script 
+  
+  ## create group | Give them LDAP  
        
         New-JCUserGroup 'TV Characters'
        
@@ -33,12 +48,12 @@
   ## Delete
    Forced user
     
-        Remove-JCUser rickanmorty -force
+        Remove-JCUser rickandmorty -force
         Remove-JCUser themagicians 
         Remove-JCUser thelastmanonearth
         
    User group
          
          Remove-JCUserGroup 'TV Characters'
-        
+         
   
