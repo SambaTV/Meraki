@@ -1,4 +1,5 @@
 # New users play around
+Get-Command -Module JumpCloud 
 
   ## Create 3 new users | with firstname,lastname,username,email | 2 w/ ldap & 1 w/o | 
   **Note** & in the username doesnt work! 
