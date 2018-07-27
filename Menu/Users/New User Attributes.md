@@ -44,13 +44,8 @@ _id                            : 5b5aafe3c73401685bf3fcb9
      Set-JCUser -username bobby.boy -NumberOfCustomAttributes 2 -Attribute1_name Department -Attribute1_value Dev -Attribute2_name Location -Attribute2_value Boulder
    
    // _NumberOfCustomAttributes_ is set to **2** so a total of four additional parameters must be populated.If this number was set to **1** there would only be two parameters to populate and if it was se **3** there would be a total of six.
-   
-    
-### Employee#
- 
-     Set -NumberOfCustomAttributes 1 -Attribute1_name Department -Attribute1_value Dev
-
-### displayName
+  
+  ### displayName
   DisplayName(BambooHR) = Username(JumpCloud)
 
 ### firstName
@@ -58,7 +53,18 @@ _id                            : 5b5aafe3c73401685bf3fcb9
 
 ### lastName
  lastName = lastname
-
+    
+### Employee#
+ Set-JCUser -username rickandmorty -NumberOfCustomAttributes 1 -Attribute1_name EmployeeNumber -Attribute1_value 
+ 
+     Set-JCUser -username rickandmorty -NumberOfCustomAttributes 5 -Attribute1_name EmployeeNumber -Attribute1_value 0 -Attribute2_name jobTitle -Attribute2_value I.T. -Attribute3_name EmploymentStatus -Attribute3_value active -Attribute4_name HireDate -Attribute4_value 7/28/18 -Attribute5_name Location -Attribute5_value San Francisco 
+    
+    //How can i create Custom Attributes in powershell
+    Get-JCUserGroupMember -GroupName 'TvCharacters' | Set-JCUser -NumberOfCustomAttributes 1 -Attribute1_name 'EmployeeNumber' -Attribute1_value '0'
+    
+    //This example either updates or adds the Custom Attribute 'name = EmployeeNumber, value=0' to all JumpCloud Users in the JumpCloud User Group 'TvCharacters'
+    
+     
 ### jobTitle
   *__jobTitle__* 
 
