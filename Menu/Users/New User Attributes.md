@@ -99,5 +99,8 @@ _id                            : 5b5aafe3c73401685bf3fcb9
    
        Set-JCUser -username rickandmorty -NumberOfCustomAttributes 1 -Attribute1_name 'EmployeeNumber' -Attribute1_value '0'
       //User  
-        Get-JCUserGroupMember -GroupName 'TV Characters' | Set-JCUser -NumberOfCustomAttributes 1 -Attribute1_name 'EmployeeNumber' -Attribute1_value '0' 
+       
+       Get-JCUserGroupMember -GroupName 'TV Characters' | Set-JCUser -NumberOfCustomAttributes 1 -Attribute1_name 'EmployeeNumber' -Attribute1_value '0' 
       //Group
+      
+      Set-JCUser -username rickandmorty -NumberOfCustomAttributes 5 -Attribute1_name EmployeeNumber -Attribute1_value '0' -Attribute2_name jobTitle -Attribute2_value 'I.T.' -Attribute3_name EmploymentStatus -Attribute3_value 'active' -Attribute4_name HireDate -Attribute4_value '7/28/18' -Attribute5_name Location -Attribute5_value 'San Francisco'
