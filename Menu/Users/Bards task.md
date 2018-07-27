@@ -28,3 +28,5 @@
    //To skip the default warning when running a Remove command use the '-force- parameter
          
          Remove-JCUser superman -force
+         
+ # Get BambooHR Departure Date
