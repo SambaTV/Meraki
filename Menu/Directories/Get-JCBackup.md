@@ -30,11 +30,13 @@ I strongly suggest to you to get familiar with the Get-Help cmdlet.
 
   ## Populate the below variables before running the script
 
-    $BackupLocation = "" # Enter full path to desired backup folder for backup CSV files. Example path on Mac "/Users/Buster/Backup/JCBackup"
+    $BackupLocation = "" 
+    # Enter full path to desired backup folder for backup CSV files. Example path on Mac "/Users/Buster/Backup/JCBackup"
       
-      $BackupLocation = '/Users/rodneynobles/Backup/JCBackup'#
+      $BackupLocation = '/Users/rodneynobles/Backup/JCBackup'
 
-    $JumpCloudAPIKey = "" # The JumpCloud API key can be found in the admin console by selecting the drop down icon next to admin email in top right and selecting "API Settings"
+    $JumpCloudAPIKey = "" 
+    # The JumpCloud API key can be found in the admin console by selecting the drop down icon next to admin email in top right and selecting "API Settings"
 
    ## --------------- Do not modify below this line ----------
 
@@ -49,7 +51,7 @@ I strongly suggest to you to get familiar with the Get-Help cmdlet.
 
 Example: 
 
-    $BackupLocation = '/Users/rodneynobles/Backup/JCBackup'#
+    $BackupLocation = '/Users/rodneynobles/Backup/JCBackup'
     $JumpCloudAPIKey = 'fake API key'
 Step 3: Determine when you want to run the crontab and convert this time to a cron schedule expression.
   daily
