@@ -9,6 +9,8 @@ Get-JCBackup command which contains examples for backing up specific items.
 
 
 Prerequisites: JumpCloud PowerShell module version 1.5.0 or later.
+# Install JC Pwsh Module
+    Install-Module JumpCloud -Scope CurrentUser
 
 # Step 1: Download or create the JumpCloudCSVBackup.ps1 file on your local machine.
   
