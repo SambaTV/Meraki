@@ -18,6 +18,10 @@ And add -Recurse to Get-ChildItem if needed. Then you can pipe Copy-Item at the 
 I strongly suggest to you to get familiar with the Get-Help cmdlet.
 //
 
+# Install JC Pwsh Module
+     pwsh
+     Install-Module JumpCloud -Scope CurrentUser
+
 # Step 1: Download or create the JumpCloudCSVBackup.ps1 file on your local machine.
   
   ## Note version 1.5.0 or later of the JumpCloud Pwsh module must be installed to leverage this script.
