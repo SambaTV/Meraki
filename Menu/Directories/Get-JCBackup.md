@@ -1,6 +1,23 @@
  
 
 
+pwsh
+Install-Module JumpCloud -Scope CurrentUser
+$BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
+$JumpCloudAPIKey = "" 
+Set-Location $BackupLocation
+Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
+Get-JCBackup -All
+$BackupLocation = '/Users/rodneynobles/Backup/JCBackup'
+$JumpCloudAPIKey = 'API key'
+env EDITOR=nano crontab -e 
+* * * * *  /usr/local/bin/pwsh /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
+
+ctrl + x
+Y
+ENTER
+
+crontab -l
 
 ## Backing up JumpCloud Directory Information to CSV
 
@@ -51,8 +68,8 @@ I strongly suggest to you to get familiar with the Get-Help cmdlet.
 
 Example: 
 
-    -> $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
-    -> $JumpCloudAPIKey = "API key"
+    -> $BackupLocation = '/Users/rodneynobles/Backup/JCBackup'
+    -> $JumpCloudAPIKey = 'API key'
 Step 3: Determine when you want to run the crontab and convert this time to a cron schedule expression.
   daily
   hourly
@@ -73,7 +90,7 @@ and then the full path to the filled out JumpCloudCSVBackup.ps1 file followed by
     
      /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
     
-    -> */1 * * * * /usr/local/bin/pwsh/Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
+    -> * * * * *  /usr/local/bin/pwsh /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
 By appending the command with ‘&>/tmp/JCBackup.log’ any errors created when the crontab runs will be stored in the file JCBackup.log located the /tmp directory.
 
      -> ctrl + x
