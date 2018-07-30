@@ -49,8 +49,8 @@ I strongly suggest to you to get familiar with the Get-Help cmdlet.
 
 Example: 
 
-    $BackupLocation = "/Users/rodney'nobles/Backup/JCBackup"#
-    $JumpCloudAPIKey = 'lu8792c9d4y2398is1tb6h0b83ebf0e92s97t382' //fake API key
+    $BackupLocation = '/Users/rodneynobles/Backup/JCBackup'#
+    $JumpCloudAPIKey = 'fake API key'
 Step 3: Determine when you want to run the crontab and convert this time to a cron schedule expression.
   daily
   hourly
