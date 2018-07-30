@@ -36,8 +36,8 @@ Prerequisites: JumpCloud PowerShell module version 1.5.0 or later.
 
 Example: 
 
-    $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"#
-    $JumpCloudAPIKey = 'lu8792c9d4y2398is1tb6h0b83ebf0e92s97t382'
+    $BackupLocation = "/Users/rodney'nobles/Backup/JCBackup"#
+    $JumpCloudAPIKey = '
 Step 3: Determine when you want to run the crontab and convert this time to a cron schedule expression.
   daily
   hourly
