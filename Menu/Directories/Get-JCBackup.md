@@ -1,16 +1,23 @@
- 
-
-
 pwsh
+
 Install-Module JumpCloud -Scope CurrentUser
+
 $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
+
 $JumpCloudAPIKey = "" 
+
 Set-Location $BackupLocation
+
 Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
+
 Get-JCBackup -All
+
 $BackupLocation = '/Users/rodneynobles/Backup/JCBackup'
+
 $JumpCloudAPIKey = 'API key'
+
 env EDITOR=nano crontab -e 
+
 * * * * *  /usr/local/bin/pwsh /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
 
 ctrl + x
