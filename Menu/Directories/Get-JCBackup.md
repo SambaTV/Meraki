@@ -67,13 +67,13 @@ This will open crontab in the nano editor.
 
 Enter the crontab schedule expression you created in Step 3 followed by ‘/usr/local/bin/pwsh’ 
    
-    @daily /usr/local/bin/pwsh
+    @hourly /usr/local/bin/pwsh
 
 and then the full path to the filled out JumpCloudCSVBackup.ps1 file followed by ‘&>/tmp/JCBackup.log’
     
      /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
     
-    -> @daily /usr/local/bin/pwsh/Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log  
+    -> @houry /usr/local/bin/pwsh/Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log  
 By appending the command with ‘&>/tmp/JCBackup.log’ any errors created when the crontab runs will be stored in the file JCBackup.log located the /tmp directory.
 
      -> ctrl + x
@@ -81,7 +81,7 @@ By appending the command with ‘&>/tmp/JCBackup.log’ any errors created when 
      -> ENTER
 Press ‘ctrl + x’ to exit the nano editor followed by ‘Y’ and then ‘enter’ at the prompt to save the crontab
 
-     -> crontab -1
+     -> crontab -l
 To see if your crontab has been saved the command ‘crontab -l’ will list all crontabs
 
 Example:
