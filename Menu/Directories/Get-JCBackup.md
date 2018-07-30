@@ -1,75 +1,70 @@
+ 
 
-# 1 
-  
-## Note version 1.5.0 or later of the JumpCloud Pwsh module must be installed to leverage this script.
 
-## After running the script five CSV files will be created within the backup location directory specified.  
 
-## Populate the below variables before running the script
+## Backing up JumpCloud Directory Information to CSV
 
-$BackupLocation = "" # Enter full path to desired backup folder for backup CSV files. Example path on Mac "/Users/Buster/Backup/JCBackup"
-      
-      $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"#
 
-$JumpCloudAPIKey = "" # The JumpCloud API key can be found in the admin console by selecting the drop down icon next to admin email in top right and selecting "API Settings"
+Get-JCBackup command which contains examples for backing up specific items.
 
-## --------------- Do not modify below this line ----------
-
-Set-Location $BackupLocation
-
-Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force #Force parameter used to auth to JumpCloud API without update check
-
-Get-JCBackup -All
-
-# 2
-Backing up JumpCloud Directory Information to CSV
-Backing up JumpCloud Directory Information to CSV
-
-All JumpCloud Directory information can be accessed via the JumpCloud API.
-
-The JumpCloud PowerShell module is a wrapper for this API that can be used to access JumpCloud Directory information not readily available within the JumpCloud Admin console. Admins can use the native PowerShell command "Export-CSV" to easily generate backup reports from the results generated from commands within the JumpCloud PowerShell module.
-
-This script uses commands within the JumpCloud PowerShell module to export user, system user, system, system group, and user group information to CSV files.
-Need to install the JumpCloud PowerShell module? The module can be installed on Mac, Windows, and Linux in a few quick steps.
-
-By default, the script will backup all users, system users, systems, user groups, system groups to separate CSV files.
-
-If you wish to only back up specific items please reference the documentation for the Get-JCBackup command which contains examples for backing up specific items.
-(MacOS) Automating JumpCloud Directory Information Backups Using Crontab and PowerShell
-
-The above script can be set up to run in an automated scenario on MacOS using the crontab command.
 
 Prerequisites: JumpCloud PowerShell module version 1.5.0 or later.
 
-Need to install the JumpCloud PowerShell module? The module can be installed on Mac, Windows, and Linux in a few quick steps.
+# Step 1: Download or create the JumpCloudCSVBackup.ps1 file on your local machine.
+  
+  ## Note version 1.5.0 or later of the JumpCloud Pwsh module must be installed to leverage this script.
 
-Step 1: Download or create the JumpCloudCSVBackup.ps1 file on your local machine.
+  ## After running the script five CSV files will be created within the backup location directory specified.  
 
-Step 2: Create a folder to save the backup CSV files in and then fill in the $BackupLocation and $JumpCloudAPIKey variables within the JumpCloudCSVBackup.ps1 file.
+  ## Populate the below variables before running the script
+
+    $BackupLocation = "" # Enter full path to desired backup folder for backup CSV files. Example path on Mac "/Users/Buster/Backup/JCBackup"
+      
+      $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"#
+
+    $JumpCloudAPIKey = "" # The JumpCloud API key can be found in the admin console by selecting the drop down icon next to admin email in top right and selecting "API Settings"
+
+   ## --------------- Do not modify below this line ----------
+
+    Set-Location $BackupLocation
+
+    Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force #Force parameter used to auth to JumpCloud API without update check
+
+    Get-JCBackup -All
+
+# Step 2: Create a folder to save the backup CSV files in and then fill in the $BackupLocation and $JumpCloudAPIKey variables within the JumpCloudCSVBackup.ps1 file.
 
 Example: 
 
-$BackupLocation = '/Users/Buster/Backup/JCBackup'
-$JumpCloudAPIKey = 'lu8792c9d4y2398is1tb6h0b83ebf0e92s97t382'
+    $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"#
+    $JumpCloudAPIKey = 'lu8792c9d4y2398is1tb6h0b83ebf0e92s97t382'
 Step 3: Determine when you want to run the crontab and convert this time to a cron schedule expression.
+  daily
+  hourly
 
 Step 4: Create the crontab
-
-New to crontabs? Check out the crontab man pages to understand crontab formatting. 
-
-Open the terminal application on MacOS
+  @daily
 
 Ener the command:
 
-env EDITOR=nano crontab -e 
+    env EDITOR=nano crontab -e 
 This will open crontab in the nano editor.
 
-Enter the crontab schedule expression you created in Step 3 followed by ‘/usr/local/bin/pwsh’ and then the full path to the filled out JumpCloudCSVBackup.ps1 file followed by ‘&>/tmp/JCBackup.log’
+Enter the crontab schedule expression you created in Step 3 followed by ‘/usr/local/bin/pwsh’ 
+   
+    @daily/usr/local/bin/pwsh
 
+and then the full path to the filled out JumpCloudCSVBackup.ps1 file followed by ‘&>/tmp/JCBackup.log’
+    
+    /Users/rodneynobles/Backup/JCBackup&>/tmp/JCBackup.log
 By appending the command with ‘&>/tmp/JCBackup.log’ any errors created when the crontab runs will be stored in the file JCBackup.log located the /tmp directory.
 
+     ctrl + x
+     Y
+     ENTER
 Press ‘ctrl + x’ to exit the nano editor followed by ‘Y’ and then ‘enter’ at the prompt to save the crontab
 
+     crontab -1
 To see if your crontab has been saved the command ‘crontab -l’ will list all crontabs
 
 Example:
