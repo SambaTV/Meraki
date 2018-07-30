@@ -40,7 +40,8 @@ I strongly suggest to you to get familiar with the Get-Help cmdlet.
 
     Set-Location $BackupLocation
 
-    Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force #Force parameter used to auth to JumpCloud API without update check
+    Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
+  #Force parameter used to auth to JumpCloud API without update check
 
     Get-JCBackup -All
 
