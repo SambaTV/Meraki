@@ -9,8 +9,14 @@ Get-JCBackup command which contains examples for backing up specific items.
 
 
 Prerequisites: JumpCloud PowerShell module version 1.5.0 or later.
-# Install JC Pwsh Module
-    Install-Module JumpCloud -Scope CurrentUser
+
+//
+    What's the issue? Did you have a look at Get-ChildiItem cmdlet help? 
+To point you in the right direction.. you can use this oneliner:
+Get-ChildItem | Where-Object {$_.LastWriteTime -ge $(get-date).AddDays(-30)}
+And add -Recurse to Get-ChildItem if needed. Then you can pipe Copy-Item at the end of the oneliner to copy to the target folder. 
+I strongly suggest to you to get familiar with the Get-Help cmdlet.
+//
 
 # Step 1: Download or create the JumpCloudCSVBackup.ps1 file on your local machine.
   
@@ -30,8 +36,7 @@ Prerequisites: JumpCloud PowerShell module version 1.5.0 or later.
 
     Set-Location $BackupLocation
 
-    Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
-    #Force parameter used to auth to JumpCloud API without update check
+    Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force #Force parameter used to auth to JumpCloud API without update check
 
     Get-JCBackup -All
 
@@ -46,7 +51,7 @@ Step 3: Determine when you want to run the crontab and convert this time to a cr
   hourly
 
 Step 4: Create the crontab
-@hourly
+  @daily
 
 Ener the command:
 
@@ -56,17 +61,10 @@ This will open crontab in the nano editor.
 Enter the crontab schedule expression you created in Step 3 followed by ‘/usr/local/bin/pwsh’ 
    
     @daily/usr/local/bin/pwsh
-    0 * * * * /usr/local/bin/pwsh 
-
 
 and then the full path to the filled out JumpCloudCSVBackup.ps1 file followed by ‘&>/tmp/JCBackup.log’
     
     /Users/rodneynobles/Backup/JCBackup&>/tmp/JCBackup.log
-    
-    
-    0 * * * * /usr/local/bin/pwsh /Users/rodneynobles/Backup/JCBackup&>/tmp/JCBackup.log
-    @daily /usr/local/bin/pwsh /Users/rodneynobles/Backup/JCBackup&>/tmp/JCBackup.log
-    
 By appending the command with ‘&>/tmp/JCBackup.log’ any errors created when the crontab runs will be stored in the file JCBackup.log located the /tmp directory.
 
      ctrl + x
