@@ -19,8 +19,8 @@ I strongly suggest to you to get familiar with the Get-Help cmdlet.
 //
 
 # Install JC Pwsh Module
-     pwsh
-     Install-Module JumpCloud -Scope CurrentUser
+     -> pwsh
+     -> Install-Module JumpCloud -Scope CurrentUser
 
 # Step 1: Download or create the JumpCloudCSVBackup.ps1 file on your local machine.
   
@@ -30,29 +30,29 @@ I strongly suggest to you to get familiar with the Get-Help cmdlet.
 
   ## Populate the below variables before running the script
 
-    $BackupLocation = "" 
+      $BackupLocation = "" 
     # Enter full path to desired backup folder for backup CSV files. Example path on Mac "/Users/Buster/Backup/JCBackup"
       
-      $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
+     -> $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
 
-    $JumpCloudAPIKey = "" 
+    -> $JumpCloudAPIKey = "" 
     # The JumpCloud API key can be found in the admin console by selecting the drop down icon next to admin email in top right and selecting "API Settings"
 
    ## --------------- Do not modify below this line ----------
 
-    Set-Location $BackupLocation
+    -> Set-Location $BackupLocation
 
-    Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
+    -> Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
   #Force parameter used to auth to JumpCloud API without update check
 
-    Get-JCBackup -All
+    -> Get-JCBackup -All
 
 # Step 2: Create a folder to save the backup CSV files in and then fill in the $BackupLocation and $JumpCloudAPIKey variables within the JumpCloudCSVBackup.ps1 file.
 
 Example: 
 
-    $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
-    $JumpCloudAPIKey = "API key"
+    -> $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
+    -> $JumpCloudAPIKey = "API key"
 Step 3: Determine when you want to run the crontab and convert this time to a cron schedule expression.
   daily
   hourly
@@ -62,7 +62,7 @@ Step 4: Create the crontab
 
 Ener the command:
 
-    env EDITOR=nano crontab -e 
+    -> env EDITOR=nano crontab -e 
 This will open crontab in the nano editor.
 
 Enter the crontab schedule expression you created in Step 3 followed by ‘/usr/local/bin/pwsh’ 
@@ -71,17 +71,17 @@ Enter the crontab schedule expression you created in Step 3 followed by ‘/usr/
 
 and then the full path to the filled out JumpCloudCSVBackup.ps1 file followed by ‘&>/tmp/JCBackup.log’
     
-    /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
+     /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
     
-    @daily 
+    -> @daily /usr/local/bin/pwsh/Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log  
 By appending the command with ‘&>/tmp/JCBackup.log’ any errors created when the crontab runs will be stored in the file JCBackup.log located the /tmp directory.
 
-     ctrl + x
-     Y
-     ENTER
+     -> ctrl + x
+     -> Y
+     -> ENTER
 Press ‘ctrl + x’ to exit the nano editor followed by ‘Y’ and then ‘enter’ at the prompt to save the crontab
 
-     crontab -1
+     -> crontab -1
 To see if your crontab has been saved the command ‘crontab -l’ will list all crontabs
 
 Example:
