@@ -73,7 +73,7 @@ and then the full path to the filled out JumpCloudCSVBackup.ps1 file followed by
     
      /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
     
-    -> */5 * * * * /usr/local/bin/pwsh/Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log  
+    -> */1 * * * * /usr/local/bin/pwsh/Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
 By appending the command with ‘&>/tmp/JCBackup.log’ any errors created when the crontab runs will be stored in the file JCBackup.log located the /tmp directory.
 
      -> ctrl + x
