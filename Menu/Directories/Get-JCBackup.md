@@ -28,7 +28,8 @@ Prerequisites: JumpCloud PowerShell module version 1.5.0 or later.
 
     Set-Location $BackupLocation
 
-    Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force #Force parameter used to auth to JumpCloud API without update check
+    Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
+    #Force parameter used to auth to JumpCloud API without update check
 
     Get-JCBackup -All
 
@@ -43,7 +44,7 @@ Step 3: Determine when you want to run the crontab and convert this time to a cr
   hourly
 
 Step 4: Create the crontab
-  @daily
+@hourly
 
 Ener the command:
 
@@ -53,10 +54,17 @@ This will open crontab in the nano editor.
 Enter the crontab schedule expression you created in Step 3 followed by ‘/usr/local/bin/pwsh’ 
    
     @daily/usr/local/bin/pwsh
+    0 * * * * /usr/local/bin/pwsh 
+
 
 and then the full path to the filled out JumpCloudCSVBackup.ps1 file followed by ‘&>/tmp/JCBackup.log’
     
     /Users/rodneynobles/Backup/JCBackup&>/tmp/JCBackup.log
+    
+    
+    0 * * * * /usr/local/bin/pwsh /Users/rodneynobles/Backup/JCBackup&>/tmp/JCBackup.log
+    @daily /usr/local/bin/pwsh /Users/rodneynobles/Backup/JCBackup&>/tmp/JCBackup.log
+    
 By appending the command with ‘&>/tmp/JCBackup.log’ any errors created when the crontab runs will be stored in the file JCBackup.log located the /tmp directory.
 
      ctrl + x
