@@ -1,30 +1,30 @@
-pwsh
+        pwsh
 
-Install-Module JumpCloud -Scope CurrentUser
+        Install-Module JumpCloud -Scope CurrentUser
 
-$BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
+        $BackupLocation = "/Users/rodneynobles/Backup/JCBackup"
 
-$JumpCloudAPIKey = "" 
+        $JumpCloudAPIKey = "" 
 
-Set-Location $BackupLocation
+        Set-Location $BackupLocation
 
-Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
+        Connect-JCOnline -JumpCloudAPIKey $JumpCloudAPIKey -force 
 
-Get-JCBackup -All
+        Get-JCBackup -All
 
-$BackupLocation = '/Users/rodneynobles/Backup/JCBackup'
+        $BackupLocation = '/Users/rodneynobles/Backup/JCBackup'
 
-$JumpCloudAPIKey = 'API key'
+        $JumpCloudAPIKey = 'API key'
 
-env EDITOR=nano crontab -e 
+        env EDITOR=nano crontab -e 
 
-* * * * *  /usr/local/bin/pwsh /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
+        * * * * *  /usr/local/bin/pwsh /Users/rodneynobles/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
 
-ctrl + x
-Y
-ENTER
+        ctrl + x
+        Y
+        ENTER
 
-crontab -l
+        crontab -l
 
 ## Backing up JumpCloud Directory Information to CSV
 
