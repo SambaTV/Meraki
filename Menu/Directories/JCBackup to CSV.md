@@ -108,6 +108,11 @@ Press ‘ctrl + x’ to exit the nano editor followed by ‘Y’ and then ‘ent
      -> crontab -l
 To see if your crontab has been saved the command ‘crontab -l’ will list all crontabs
 
+*Protip*
+    
+    tail /tmp/JCBackup.log
+    
+    man tail -f
 Example:
 
 30 9 * * *  /usr/local/bin/pwsh /Users/Buster/Backup/JumpCloudCSVBackup.ps1 &>/tmp/JCBackup.log
