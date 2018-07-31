@@ -1,5 +1,20 @@
 ### Prerequisities:
   * Generate a public certificate and private key pair.
+     JumpCloud's SSO SAML connectors allow for either __SHA1__ or __SHA256__ certificates
+     To create a private key -> public certificate for that private key
+        
+         openssl genrsa -out private.pem 2048
+         openssl req -new -x509 -sha256 -key private.pem -out cert.pem -days 1095
+         
+     To determine the SHA256 Fingerprint for the public certificate 
+         
+         openssl x509 -sha256 -in cert.pem -noout -fingerprint
+     To determine the SHA1 Fingerprint for the public certificate 
+         
+         openssl x509 -sha1 -in cert.pem -noout -fingerprint
+         SHA1 Fingerprint=1A:29:04 ...
+       
+     
   * In order to successfully complete the integration between JumpCloud and BambooHR, you must use a team admin (administrator) account in BambooHR.
   * JumpCloud managed users must have an email address that corresponds to an email address associated with a BambooHR account.
 ### Notes:
