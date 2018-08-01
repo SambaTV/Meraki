@@ -1,4 +1,4 @@
-# JumpCloud-API
+# JumpCloud-API scripting
 
 # Evaluating the JumpCloud platform
 1. Adding Users & Systems
@@ -27,3 +27,8 @@
 2. Configure GAM
 3. Run GAM
 4. GAM API communicate with JC
+
+# SSO SAML2 
+1. SHA256
+2. BambooHR
+3. Slack
