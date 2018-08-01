@@ -15,6 +15,9 @@ Using the boolean parameter '-activated' with the search filter $false this sear
 Search filter for all disabled ldap users
     
     Get-JCUser -ldap_binding_user $False -returnProperties username, created
+Search filter for all non ldap enabled members
+
+    Get-JCUser -filterDateProperty created -dateFilter after -date (Get-Date).AddDays(-1) -returnProperties username, created | Select Username -Unique | Add-JCUserGroupMember -GroupName AllUsers
 
 Adds all JumpCloud users that have the custom attribute 'Department' set with a value of 'Sales' to the group 'Sales'
     
