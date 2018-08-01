@@ -20,11 +20,23 @@
   3. Select the + in the upper left, scroll or search for the application in the 'Configure New Application' side panel, the select
   'configure'.
   4. In the **IDP Entity ID** field, enter https://YOURDOMAIN.TLD (e.g., https://thebestwidgets.com).
+    
+    -> https://samba.tv
   5. Select **Upload IdP Private Key** and upload the private.pem file generated according to the above prerequisites.
+   
+    see Rodney
   6. Select **Upload IdP Certificate** and upload the cert.pem file generated according to the above prerequisites.
+  
+    see Rodney
   7. In the **ACS URL** field, enter https://YOURDOMAIN.bamboohr.com/saml/consume.php (replace YOURDOMAIN with your account's registered BambooHR domain name).
+  
+    -> https://sambatv.bamboohr.com/saml/consume.php
   8. In the field terminating the **IdP URL**, either leave the default value or enter a plaintext string unique to this connector.
+  
+    -> https://sso.jumpcloud.com/saml2/bamboohr
   9. (Optional) In the **Display Label** field, enter a label that will appear beside the BambooHR logo within the JumpCloud console to guide administrators and users to the connection you have configured.
+  
+    Insert prompt here
   10. Select **Activate**.
   
 # Configure the Service Provider
