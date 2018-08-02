@@ -22,4 +22,6 @@ Once you have a copy of the source, you can embed it in your own Python package,
     $ pip install .
     
     
+   https://www.bamboohr.com/api/documentation/bindings.php
+    
     
