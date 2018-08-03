@@ -1,0 +1,22 @@
+Write a Powershell script that conditionally updates user information in Active Directory from a RESTful API call to BambooHR.
+
+The script should do the following:
+
+1. Connect to BambooHR via the API and download employee information
+2. Iterate through the results and update the associated users in Active Directory
+3. The following fields should be updated based on EmployeeID:
+  a. FirstName
+  b. LastName
+  c. PreferredFirstName (takes precedence over First Name)
+  d. DisplayName
+  e. Department
+  f. Manager (will need to lookup Manager in AD based on EmployeeID)
+4. Also add in the condition to only update the Active Directory user if a value has changed in BambooHR.
+
+Use Powershell scripting best practice to include:
+  a. Error checking
+  b. Data validation
+  c. Logging
+  d. Documenting comments.  
+
+Invoke-RestMethod should be used to make the API call, and the script should not save to a temporary local file.
