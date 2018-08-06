@@ -34,4 +34,7 @@
 3. Slack
 
 #BambooHR Onboarding/Offboarding
-1. new user ->  email notification to IT admin
+1. Get all info of one user with one script by calling their user ID/ username
+2. New user(onboarding) ->  email notification to IT admin
+3. Delete user(offboarding) -> email notification to IT admin
+4. Connect Bamboo HR userID number with Jumpcloud username 
