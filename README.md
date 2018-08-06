@@ -34,6 +34,7 @@
 3. Slack
 
 # BambooHR Onboarding/Offboarding
+php -> python
 1. Get all info of one user with one script by calling their user ID/ username
 2. Send data from Webpage to our server to be processed
 3. New user(onboarding) ->  email notification to IT admin
