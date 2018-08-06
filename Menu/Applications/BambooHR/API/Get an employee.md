@@ -19,3 +19,12 @@
 
 ### Sample URL:
     https://api.bamboohr.com/api/gateway.php/testcorp/v1/employees/123?fields=firstName,lastName
+    
+### Sample Response:
+
+   XML
+            
+    <employee id="123">
+        <field id="firstName">John</field>
+        <field id="lastName">Doe</field>
+    </employee>
