@@ -1,10 +1,10 @@
 # GET
 
-    GET/api/gateway.php/sambatv/v1/employees/{number}?fields=displayName,firstName,lastName,preferredName,gender,jobTitle,workPhone,mobilePhone,workEmail,department,location,workPhoneExtension,photoUploaded,photoUrl,canUploadPhoto
+    GET/api/gateway.php/sambatv/v1/employees/{number}?fields=EmployeeNumber,id,displayName,firstName,lastName,preferredName,gender,jobTitle,workPhone,mobilePhone,workEmail,department,location,status,workPhoneExtension,photoUploaded,photoUrl,canUploadPhoto
     
     // (id) number to fieldlist
     
-    GET/api/gateway.php/sambatv/v1/employees/{displayName}?fields=id,firstName,lastName,preferredName,gender,jobTitle,workPhone,mobilePhone,workEmail,department,location,workPhoneExtension,photoUploaded,photoUrl,canUploadPhoto
+    GET/api/gateway.php/sambatv/v1/employees/{displayName}?fields=EmployeeNumber,id,firstName,lastName,preferredName,gender,jobTitle,workPhone,mobilePhone,workEmail,department,location,workPhoneExtension,photoUploaded,photoUrl,canUploadPhoto
     //(displayname) name to fieldlist and id
 ## Get an employee
 ### HTTP Method:
@@ -25,7 +25,7 @@
     404 - if the employee does not exist.
 
 ### Sample URL:
-    https://api.bamboohr.com/api/gateway.php/sambatv/v1/employees/421?fields=firstName,lastName
+    https://api.bamboohr.com/api/gateway.php/sambatv/v1/employees/421?fields=EmployeeNumber,id,firstName,lastName,preferredName,gender,jobTitle,workPhone,mobilePhone,workEmail,department,location,status,workPhoneExtension,photoUploaded,photoUrl,canUploadPhoto
     
 ### Sample Response:
 
