@@ -14,7 +14,7 @@
     1. List Commands
       -> Get-Command -Module JumpCloud
     2. Run a command
-      -> Connect-JCUser
+      -> Connect-JCOnline
           * Type !? for Help
       -> It will ask for JumpCloudAPIKey
         -> To obtain JumpCloudAPIKey
