@@ -1,2 +1,5 @@
-# https://{API Key}:x@api.bamboohr.com/api/gateway.php/sambatv/v1/employees/directory
-				
+# Requests
+1. Create folders
+2. terminal( open up those folders ) ( cd )
+3. virtualenv env --no-site-packages
+
