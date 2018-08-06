@@ -38,7 +38,11 @@
 2. New user(onboarding) ->  email notification to IT admin
   * last change information
   * Web hooks
+  * Using gmail with command line Linux mail
 3. Delete user(offboarding) -> email notification to IT admin
   * last change information
   * Web hooks
+  mail x
+  native mailer on system
+  runtime ssh to connect to Bards server
 4. Connect Bamboo HR userID number with Jumpcloud username 
