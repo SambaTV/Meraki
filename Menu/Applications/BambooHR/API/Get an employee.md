@@ -25,7 +25,7 @@
     404 - if the employee does not exist.
 
 ### Sample URL:
-    https://api.bamboohr.com/api/gateway.php/testcorp/v1/employees/123?fields=firstName,lastName
+    https://api.bamboohr.com/api/gateway.php/sambatv/v1/employees/421?fields=firstName,lastName
     
 ### Sample Response:
 
