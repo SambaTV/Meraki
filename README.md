@@ -32,3 +32,6 @@
 1. SHA256
 2. BambooHR
 3. Slack
+
+#BambooHR Onboarding/Offboarding
+1. new user ->  email notification to IT admin
