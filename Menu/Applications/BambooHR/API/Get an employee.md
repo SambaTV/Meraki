@@ -5,7 +5,7 @@
     // (id) number to fieldlist
     
     GET/api/gateway.php/sambatv/v1/employees/{displayName}?fields=EmployeeNumber,id,firstName,lastName,preferredName,gender,jobTitle,workPhone,mobilePhone,workEmail,department,location,workPhoneExtension
-    //(displayname) name to fieldlist and id
+    //(displayname) name to fieldlist and id (This doesn't work)
 ## Get an employee
 ### HTTP Method:
     GET
