@@ -35,14 +35,15 @@
 
 # BambooHR Onboarding/Offboarding
 1. Get all info of one user with one script by calling their user ID/ username
-2. New user(onboarding) ->  email notification to IT admin
+2. Send data from Webpage to our server to be processed
+3. New user(onboarding) ->  email notification to IT admin
   * last change information
   * Web hooks
   * Using gmail with command line Linux mail
-3. Delete user(offboarding) -> email notification to IT admin
+4. Delete user(offboarding) -> email notification to IT admin
   * last change information
   * Web hooks
   mail x
   native mailer on system
   runtime ssh to connect to Bards server
-4. Connect Bamboo HR userID number with Jumpcloud username 
+5. Connect Bamboo HR userID number with Jumpcloud username 
