@@ -1,6 +1,7 @@
 # GET
 
-    GET/api/gateway.php/sambatv/v1/employees/{number}?fields={fieldList}
+    GET/api/gateway.php/sambatv/v1/employees/{number}?fields=displayName,firstName,lastName,preferredName,gender,jobTitle,workPhone,mobilePhone,workEmail,department,location,workPhoneExtension,photoUploaded,photoUrl,canUploadPhoto
+    
     // (id) number to fieldlist
     
     
