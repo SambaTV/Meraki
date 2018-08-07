@@ -65,39 +65,31 @@ Data will be posted in the standard format of an HTML form submission. The struc
  
  https://support.litmos.com/hc/en-us/articles/227738887-BambooHR-Integration
  
- Enabling Webhooks (optional)
+ # Tracking specific field changes
 
-Important Note: Webhooks are not designed for field mapping. Instead, Webhooks are designed for tracking specific field changes.
+Important Note: Webhooks are not designed for field mapping.
 
-BambooHR provides a feature called Webhooks, which is an optional feature that can be used to automatically push updated employee data into Litmos learner profiles for compatible integration fields (so that administrators do not have to continually press "sync Bamboo employee list" to stage employee updates in Litmos. A BambooHR Administrator can configure a Litmos Webhook by following these steps.
+BambooHR provides a feature called Webhooks, which is an optional feature that can be used to automatically push updated employee data (so that administrators do not have to continually press "sync Bamboo employee list" to stage employee updates . A BambooHR Administrator can configure a Litmos Webhook by following these steps.
 
- 
+ 1. Navigate to Settings > Account > Webhooks
+ 2. Give a meaningful name to the Webhook
 
- 
+__JC Integration__
+      
+ 3. Navigate to the "What Fields Do You Want To Post" section
 
-Navigate to Settings > Account > Webhooks
-
-
-
-
-Give a meaningful name to the Webhook
-
-Navigate to the "What Fields Do You Want To Post" section and browse for the "Litmos Access" field. This field exists under "Training". Select this field as a field to POST in the "What Fields Do You Want To Post" section. This is a required field to POST in order for the Webhook to work.
-
-Next, select the fields from the "What Fields Do You Want To Monitor" section, as these will be the fields that POST data requests to Litmos to update the information of employees in Litmos. Remember, there are only certain fields that can be updated in Litmos.
-
-
-
+ 4. Next, select the fields from the "What Fields Do You Want To Monitor" section, 
+         as these will be the fields that POST data requests to JC to update the information of employees in JC. Remember, there are only certain fields that can be updated in JC.
 
 
 
 Select the fields to monitor for Litmos. The screen below shows the fields can be updated in Litmos: 
+https://support.litmos.com/hc/en-us/article_attachments/115000029394/bamboo_Litmos_Access_POST.PNG
 
-BambooHR_Webhooks_Monitor.JPG
 
 Select the fields to post to Litmos. The fields in the screen below are the fields that Litmos supports for Post:
 
-BambooHR_Webhooks_Post.JPG
+https://support.litmos.com/hc/article_attachments/115001634873/BambooHR_Webhooks_Monitor.JPG
 
 Select the Data format as JSON 
 
