@@ -23,6 +23,7 @@ Day of the Week	Monday
 +1 Month	1517472000
 +1 Year	1546329600
 
+**Note BambooHR doesnt use the correct GMT/UTC  (they use 00:00)** 
 
     https://api.bamboohr.com/api/gateway.php/sambatv/v1/employees/changed/?since=2018-01-01T01:00:00-07:00
     
