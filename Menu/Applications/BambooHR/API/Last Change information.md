@@ -9,3 +9,6 @@ GET /api/gateway.php/sambatv/v1/employees/changed/?since=2011-06-06T13:00:00%2B0
 {type} 
 
 new user ->  email
+
+URL encoded: /log?a=b&c=4
+JSON in URL: /log?%7B%22a%22:%22b%22,%22c%22:4%7D
