@@ -29,6 +29,15 @@ The user can also configure which fields will be posted by the webhook. Any fiel
         Work Ext.
         City
         Rehire Date
+        
+# Useful 
+   Useful for Updated 
+         Status Active
+        Employment Status
+   
+   Useful for Inserted  
+   
+   Useful for Deleted 
 
 # CronJob... Kinda
 Users can specify a schedule of when they want webhooks to fire (only at 12:00pm or every hour at 5 after the hour). They can also limit how often a webhook will fire by setting a maximum number of requests per interval in seconds.
