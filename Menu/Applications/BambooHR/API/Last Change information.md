@@ -34,12 +34,12 @@ Day of the Week	Monday
     https://api.bamboohr.com/api/gateway.php/sambatv/v1/employees/changed/?since=2018-01-01T01:00:00-07:00&type=inserted
 
 ## Updated
-( offboarding/ deactivation)
+( update important user info)
     
     https://api.bamboohr.com/api/gateway.php/sambatv/v1/employees/changed/?since=2018-01-01T01:00:00-07:00&type=updated
 
 ## Deleted
-( update important user info)
+( offboarding/ deactivation)
 
     https://api.bamboohr.com/api/gateway.php/sambatv/v1/employees/changed/?since=2018-01-01T01:00:00-07:00&type=deleted
 
