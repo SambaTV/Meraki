@@ -3,7 +3,12 @@ Webhooks allow you to monitor changes made in BambooHR. BambooHR will watch for 
 # Configuration
 admin user in the tools section by clicking on the link "Webhooks".
       https://www.bamboohr.com/contact.php
-      
+     
+
+ # specify which fields they want to monitor
+
+The user can also configure which fields will be posted by the webhook. Any field in the database can be posted. Fields can be posted with an alternate name, but use BambooHR's field names (in English) by default.
+
         Department
         Division
         EEO Job Category
@@ -25,10 +30,7 @@ admin user in the tools section by clicking on the link "Webhooks".
         City
         Rehire Date
 
-# specify which fields they want to monitor
-
-The user can also configure which fields will be posted by the webhook. Any field in the database can be posted. Fields can be posted with an alternate name, but use BambooHR's field names (in English) by default.
-
+# CronJob... Kinda
 Users can specify a schedule of when they want webhooks to fire (only at 12:00pm or every hour at 5 after the hour). They can also limit how often a webhook will fire by setting a maximum number of requests per interval in seconds.
 
 # Security 
@@ -47,4 +49,6 @@ Data will be posted in the standard format of an HTML form submission. The struc
       employees[<employeeId>][Last name]=Smith
       employees[<employeeId>][Job title]=Engineer
       
- where "changedFields" is an array of fields that were changed. If the field is included in the employee data, it will give the name of the posted field. Otherwise, a field ID will be given, and more information about the field can be looked up using the More than one employeeId may be present as a key in the employees structure. While this structure will not be changed, more or less fields with different names may be sent to you, as configured by the user.	In addition, in the future, we may add more context to the structure, so it is good practice to ignore fields that your webhook does not recognize.
+ where "changedFields" is an array of fields that were changed. If the field is included in the employee data, it will give the name of the posted field. Otherwise, a field ID will be given, and more information about the field can be looked up using the API.
+ 
+ More than one employeeId may be present as a key in the employees structure. While this structure will not be changed, more or less fields with different names may be sent to you, as configured by the user.	In addition, in the future, we may add more context to the structure, so it is good practice to ignore fields that your webhook does not recognize.
