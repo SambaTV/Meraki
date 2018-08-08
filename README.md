@@ -49,3 +49,5 @@ php -> python
   runtime ssh to connect to Bards server
   
 # Connect Bamboo HR userID number with Jumpcloud username (Future)
+
+BambooHR new user -> Webhook -> JumpCloud/Jumpcloud API -> Create account in Gmail
