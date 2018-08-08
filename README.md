@@ -34,7 +34,7 @@
 3. Slack
 
 # BambooHR Onboarding/Offboarding (Current)
-php -> python
+php -> python -> python API ffor BambooHR
 1. Get all info of one user with one script by calling their user ID/ username
 2. Send data from Webpage to our server to be processed
 3. New user(onboarding) ->  email notification to IT admin
@@ -50,4 +50,10 @@ php -> python
   
 # Connect Bamboo HR userID number with Jumpcloud username (Future)
 
-BambooHR new user -> Webhook -> JumpCloud/Jumpcloud API -> Create account in Gmail
+**New Hire**  
+*opt 1. (Last changed + Since +)*
+Hired -> Create an account on BambooHR -> GET:LastChanged (inserted)-> JumpCloud/JumpCloud API -> Create account in Gmail
+
+*opt 2. (web hooks)*
+Hired -> Create an account on BambooHR -> Triggers (inserted) BambooHR Webhook (posted in HTML form) -> JumpCloud/JumpCloud API -> Create account in Gmail
+
