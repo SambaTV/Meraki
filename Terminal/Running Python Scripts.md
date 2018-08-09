@@ -12,5 +12,6 @@
   5. open a Terminal 
   6. create a path to file using cd
   7. Enter:
-      python file name
+     
+          python file name
   8. run scripts inside
