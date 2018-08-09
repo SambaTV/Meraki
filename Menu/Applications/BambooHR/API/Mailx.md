@@ -32,5 +32,5 @@ Any email sent from the system will get sent through the gmail servers.
       
  You should receive your email soon from your gmail account
  
- __For automated system-wide emails to be sent correctly you need to login as root. You can **sudo su** to get access as root
- then repeat this process__
+ _For automated system-wide emails to be sent correctly you need to login as root. You can **sudo su** to get access as root
+ then repeat this process_
