@@ -57,3 +57,5 @@ Hired -> Create an account on BambooHR -> GET:LastChanged (inserted)-> JumpCloud
 *opt 2. (web hooks)*
 Hired -> Create an account on BambooHR -> Triggers (inserted) BambooHR Webhook (posted in HTML form) -> JumpCloud/JumpCloud API -> Create account in Gmail
 
+## Slack SSO Configuration
+Sandbox
