@@ -6,7 +6,7 @@ Configure access & security
 (Workspace Owner != Primary Owner)
 
 * Enable SAML with IDP ?
-(JumpCloud)
+(JumpCloud is the app's IDP or identity provider)
 
 * Enable SSO feature in Slack
 (Workspace Owner) 
