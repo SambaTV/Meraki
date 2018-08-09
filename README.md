@@ -59,3 +59,7 @@ Hired -> Create an account on BambooHR -> Triggers (inserted) BambooHR Webhook (
 
 ## Slack SSO Configuration
 Sandbox
+  1. Configure Slack with SAML configurations and JUmpCloud as the IDP
+  2. Bind the App to a User Group 
+      Members gain access to app through SAML, they will be redirected to JumpCloud for SAML authentication.
+  
