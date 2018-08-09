@@ -1,13 +1,25 @@
 # First Set up Text editor
 
-  1. Open a text editor
+  1. Open a text editor 
+  ex) Sublime
   
-  2. Create a file 
+  2. Create a file
   
   3. Copy and paste this into the file:
-    
+  
+          import requests
+          import json
+
+          api_key = "<YourAPIKey>"
+          url = "https://{}:x@api.bamboohr.com/api/gateway.php/sambatv/v1/employees/directory".format(api_key)
+          header = {"Accept": "application/json"}
+          response = requests.get(url,headers=header)
+          response_data = json.loads(response.content)
+          print response_data
+  
       
-  4. Save the file as
+  4. Click Save file As and create a name for your file with with .py at the end
+  ex) LastChangeInformation.py
   
 # Then Set up Terminal
 
