@@ -21,7 +21,11 @@ Helpdesk buttons
                         "type": "button",
                         "value": "open"
                     },
-                    {
+                ]
+            }
+        ]
+    }
+ {
                         "name": "ticket",
                         "text": "Close a ticket",
                         "style": "danger",
@@ -34,7 +38,3 @@ Helpdesk buttons
                             "dismiss_text": "No"
                         }
                     }
-                ]
-            }
-        ]
-    }
