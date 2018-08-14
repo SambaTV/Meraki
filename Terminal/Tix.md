@@ -31,7 +31,8 @@ write file
         </body>
     </html>
 exit vi
-    
+    ** press i to enter insert mode** 
+        
    
     mv index.html html/
     
