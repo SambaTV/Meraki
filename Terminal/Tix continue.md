@@ -1,11 +1,9 @@
 
 ## Directory Rubric
-Cgi-bin
+    Cgi-bin
 
-html
+    html
 
-test.tutorialinux.com
-
-  public_html
-
-    index.html
+    test.tutorialinux.com
+      public_html
+        index.html
