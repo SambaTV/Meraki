@@ -1,6 +1,8 @@
 # Send Automated Linux email with gmail
 mailx with a gmail Account profile.
 
+      echo "Body" | mail -s "Subject" -r "Tix SambaTV<noreply@samba.tv>" someone@samba.tv    
+
 ## Commands
 https://www.binarytides.com/linux-mailx-command/
 
@@ -65,7 +67,7 @@ Any email sent from the system will get sent through the gmail servers.
  8. Attachments
  
         echo "Body" | mail -s "Subject" -r "Tix SambaTV<noreply@samba.tv>" -a /path/to/file someone@samba.tv
- 9. external SMTP server
+ 9. external SMTP server **Doesn't work**
  
         echo "This is the message body and contains the message" | mailx -v -r "noreply@samba.tv" -s "This is the subject" -S smtp="mail.example.com:587" -S smtp-use-starttls -S smtp-auth=login -S smtp-auth-user="tix@samba.tv" -S smtp-auth-password="Welovetv2018*" -S ssl-verify=ignore rodney@samba.tv
        
