@@ -1,4 +1,12 @@
 # Tix Server
+**cd ..**
+move up
+
+**cd ~**
+root/ home
+
+**cd -**
+move to last dir
 
 ## Set up for user
 
@@ -32,9 +40,25 @@ write file
     </html>
 exit vi
     ** press i to enter insert mode** 
-        
+    ** esc, then SHIFT + ZZ to save and exit**
    
+
+    mkdir html
     mv index.html html/
+    tree .
+    
+    (control) R - recent 
+    
+    vim /etc/httpd/conf.d/welcome.conf
+commentation 
+    
+    :wq:
+    
+    mkdir -p /var/www/test.bhrjcstv.com/public_html
+    mv html/index.html tes.bhrjcstc.com/public_html
+    vim /etc/httpd/conf/httpd/conf
+    
+    
     
     
 
