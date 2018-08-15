@@ -61,6 +61,13 @@ Any email sent from the system will get sent through the gmail servers.
  7. Reply-to address
  
         echo "Body" | mail -s "Subject" -S replyto="Rodney<rodney@samba.tv>" someone@samba.tv
+        
+ 8. Attachments
+ 
+        echo "Body" | mail -s "Subject" -r "Tix SambaTV<noreply@samba.tv>" -a /path/to/file someone@samba.tv
+ 9. external SMTP server
+ 
+        echo "This is the message body and contains the message" | mailx -v -r "noreply@samba.tv" -s "This is the subject" -S smtp="mail.example.com:587" -S smtp-use-starttls -S smtp-auth=login -S smtp-auth-user="tix@samba.tv" -S smtp-auth-password="Welovetv2018*" -S ssl-verify=ignore rodney@samba.tv
        
        
         echo -e "Mail body text" | mailx -A gmail -s "Mail subject" your@email
@@ -69,3 +76,6 @@ Any email sent from the system will get sent through the gmail servers.
  
  _For automated system-wide emails to be sent correctly you need to login as root. You can **sudo su** to get access as root
  then repeat this process_
+ 
+https://stackoverflow.com/questions/16799407/mailx-and-gmail-nss-config-dir
+ https://serverfault.com/questions/498588/smtp-gmail-com-from-bash-gives-error-in-certificate-peers-certificate-issuer
