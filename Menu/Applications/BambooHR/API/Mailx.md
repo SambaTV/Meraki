@@ -45,7 +45,24 @@ Any email sent from the system will get sent through the gmail servers.
         mail -s "Subject" someone@samba.tv < /path/to/file
  or  
 
+        echo "This is message body" | mail -s "Subject" someone@samba.tv
+ 4. Multiple recipients( comma separated)
+  
+        echo "Body" | mail -s "Subject" someone@samba.tv,someone2@samba.tv
+        
+ 5. CC and BCC
+       
+        echo "Body" | mail -s "subject" -c ccuser@samba.tv someone@samba.tv
+       
+ 6. From name and address
  
+        echo "Body" | mail -s "Subject" -r "Tix SambaTV<noreply@samba.tv>" someone@samba.tv
+        
+ 7. Reply-to address
+ 
+        echo "Body" | mail -s "Subject" -S replyto="Rodney<rodney@samba.tv>" someone@samba.tv
+       
+       
         echo -e "Mail body text" | mailx -A gmail -s "Mail subject" your@email
       
  You should receive your email soon from your gmail account
