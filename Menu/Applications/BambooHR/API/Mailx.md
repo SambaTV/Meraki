@@ -1,6 +1,9 @@
 # Send Automated Linux email with gmail
 mailx with a gmail Account profile.
 
+## Commands
+https://www.binarytides.com/linux-mailx-command/
+
 Any email sent from the system will get sent through the gmail servers. 
  * host email domain with Gsuite 
  * make a **noreply** mailbox
