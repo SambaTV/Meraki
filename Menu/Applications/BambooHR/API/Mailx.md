@@ -8,7 +8,9 @@ Any email sent from the system will get sent through the gmail servers.
  * password for less secure apps
  
  ## Install mailx
-      
+ 
+ 
+      yum install heirloom-mailx
       sudo apt-get install heirloom-mailx
  ## Create the gmail account for mailx
  
