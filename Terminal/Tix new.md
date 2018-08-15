@@ -8,6 +8,8 @@ root/ home
 **cd -**
 move to last dir
 
+**ifconfig**
+
 **:wq** 
 Hit the Esc key to enter "Normal mode". Then you can type : to enter "Command-line mode". A colon (:) will appear at the bottom of the screen and you can type in one of the following commands. To execute a command, press the Enter key.
 
@@ -93,15 +95,28 @@ edit our main httpd conf
             ServerAdmin webmaster@test.bhrjcstv.com
             DocumentRoot /var/www/test.bhrjcstv.com/public_html
             ServerName test.bhrjcstv.com
+If your server doesnt have a specified DNS use your IP address
+
+            ServerName 172.10.0.249
             ServerAlias bhrjcstv.com
             ErrorLog /var/www/test.bhrjcstv.com/error.log
-    <VirtualHost *:80>
-    ~                                                                                                  
-    ~                                                      
+    </VirtualHost>
+    
+    ~  
+exit vim
+    
+    :wq
+graceful restart of apache by rereading config files
 
+    apachectl graceful
+  
+    ip addr show
+We are not using DNS for this (testing)
     
-    
-    
+EDIT /etc/hosts on local machine
+
+    ~ sudo vim /etc/hosts 
+   
 
     
   
