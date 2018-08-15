@@ -8,6 +8,12 @@ root/ home
 **cd -**
 move to last dir
 
+**:wq** 
+comment out
+
+**mkdir -p** 
+creates arbitrary directories
+
 ## Set up for user
 
     ssh root@(your ip address)
@@ -57,6 +63,7 @@ commentation
     mkdir -p /var/www/test.bhrjcstv.com/public_html
     mv html/index.html tes.bhrjcstc.com/public_html
     vim /etc/httpd/conf/httpd/conf
+    
     
     
     
