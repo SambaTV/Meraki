@@ -1,7 +1,7 @@
 # Send Automated Linux email with gmail
 mailx with a gmail Account profile.
 
-      echo "Body" | mail -s "Subject" -r "Tix SambaTV<noreply@samba.tv>" someone@samba.tv    
+      echo "New Hire Test" | mail -s " This is a test for new hire/onboarding automation" -r "Tix SambaTV<noreply@samba.tv>"  -S replyto="Rodney<rodney@samba.tv>" rodney@samba.tv, helpdesk@samba.tv    
 
 ## Commands
 https://www.binarytides.com/linux-mailx-command/
