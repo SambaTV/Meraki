@@ -10,6 +10,8 @@ move to last dir
 
 **ifconfig**
 
+**yum install **
+
 **:wq** 
 Hit the Esc key to enter "Normal mode". Then you can type : to enter "Command-line mode". A colon (:) will appear at the bottom of the screen and you can type in one of the following commands. To execute a command, press the Enter key.
 
@@ -116,6 +118,18 @@ We are not using DNS for this (testing)
 EDIT /etc/hosts on local machine
 
     ~ sudo vim /etc/hosts 
+    
+     127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+    127.0.1.1       minibuntu
+
+    # The following lines are desireable for IPv6 capable hosts
+    ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+    ff02::1 ipv6-allnodes
+    ff02::2 ip6-allrouters
+
+    172.10.0.249 test.bhrjcstv.com
+
+
    
 
     
