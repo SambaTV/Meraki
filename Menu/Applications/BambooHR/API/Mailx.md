@@ -86,7 +86,7 @@ Any email sent from the system will get sent through the gmail servers.
         q
  9. external SMTP server **Doesn't work**
  
-        echo "This is the message body and contains the message" | mailx -v -r "noreply@samba.tv" -s "This is the subject" -S smtp="mail.example.com:587" -S smtp-use-starttls -S smtp-auth=login -S smtp-auth-user="tix@samba.tv" -S smtp-auth-password="Welovetv2018*" -S ssl-verify=ignore rodney@samba.tv
+        echo "This is the message body and contains the message" | mailx -v -r "noreply@samba.tv" -s "This is the subject" -S smtp="mail.example.com:587" -S smtp-use-starttls -S smtp-auth=login -S smtp-auth-user="tix@samba.tv" -S smtp-auth-password="" -S ssl-verify=ignore rodney@samba.tv
        
        
         echo -e "Mail body text" | mailx -A gmail -s "Mail subject" your@email
