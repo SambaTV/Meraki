@@ -4,10 +4,18 @@ mailx with a gmail Account profile.
       echo "body" | mail -s "subject" -r "MCP SambaTV<noreply@samba.tv>"  -S replyto="Rodney<rodney@samba.tv>" helpdesk@samba.tv 
       
       echo "I've got a little challenge for you, Sark - a new recruit. He's a tough case, but I want him treated in the usual manner. Train him for the games...End of line" | mail -s "Master Control Program" -r "MCP SambaTV<noreply@samba.tv>"  -S replyto="Rodney<rodney@samba.tv>" helpdesk@samba.tv   
-     
+    
+    
 
 
 ## Commands
+-a file Allows you to attach the given file to the e-mail
+-b address Sends blind carbon copies to the comma separated e-mail address list
+-c address Sends copies to a list of users
+-q file Sets the message contents from the given file
+-r from address Sets the from address of the e-mail to be sent
+-s subject Sets the e-mail subject
+
 https://www.binarytides.com/linux-mailx-command/
 
 Any email sent from the system will get sent through the gmail servers. 
