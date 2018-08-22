@@ -62,7 +62,23 @@ so that BambooHR knows its safe
       echo $chalenge; 
     }
 
+# Mailing System
+### Envelope(mcpmailx.php)
 
+    echo "First, Last, Department, Location, Effective Date, Employment Status" | mail -q msg.php -s "Employee Status Update" -r "MCP SambaTV<noreply@samba.tv>"  -S replyto="Rodney<rodney@samba.tv>" rodney@samba.tv
+    
+### Paper (msg.php)
+
+    Hello
+    
+### Pen (index.php)
+
+    Accept webhooks from BambooHR.
+    Post webhook input to local file msg.php
+    (Overwrite info every 4 hours)
+    (Keep same file location) cd directory
+    (
+  
 
 
 
