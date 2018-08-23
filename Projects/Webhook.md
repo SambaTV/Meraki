@@ -87,7 +87,8 @@ so that BambooHR knows its safe
       echo file_get_contents('subject.txt');// insert subject here
       file_put_contents('subject.txt', 'new subject');;
       echo file_get_contents('subject.txt); // new subject
-  
+      
+  textutil -convert docx ~/Desktop/TextDocuments/*.txt
 ### Paper (subject.txt)
 change from a read-only chmod 777 subject.txt
 
