@@ -81,6 +81,8 @@ so that BambooHR knows its safe
    (Overwrite info every 4 hours)
    (Keep same file location) cd directory
    
+   curl -o /Users/rodneynobles/Backup/subject.txt https://fileinfo.com/extension/example
+   
     file_put_contents('subject.txt', 'insert subject here');
       echo file_get_contents('subject.txt');// insert subject here
       file_put_contents('subject.txt', 'new subject');;
