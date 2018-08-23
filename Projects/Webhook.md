@@ -63,22 +63,56 @@ so that BambooHR knows its safe
     }
 
 # Mailing System
-### Envelope(mcpmailx.php)
 
-    echo "First, Last, Department, Location, Effective Date, Employment Status" | mail -q msg.php -s "Employee Status Update" -r "MCP SambaTV<noreply@samba.tv>"  -S replyto="Rodney<rodney@samba.tv>" rodney@samba.tv
-    
-### Paper (msg.php)
 
-    Hello
-    
 ### Pen (index.php)
 
-    Accept webhooks from BambooHR.
-    Post webhook input to local file msg.php
-    (Overwrite info every 4 hours)
-    (Keep same file location) cd directory
-    (
+   Accept webhooks from BambooHR.
+     
+    <?php
+    
+    $json = file_get_contents('php://input');
+    $action = json_decode($json, true);
+    $action_id =$action->id;
+    $card_id = $action->data->card->id;
+    var_dump($array);
+    
+   Post webhook input to local file msg.php
+   (Overwrite info every 4 hours)
+   (Keep same file location) cd directory
+   
+    file_put_contents('subject.txt', 'insert subject here');
+      echo file_get_contents('subject.txt');// insert subject here
+      file_put_contents('subject.txt', 'new subject');;
+      echo file_get_contents('subject.txt); // new subject
   
+### Paper (subject.txt)
+change from a read-only chmod 777 subject.txt
 
+    Hello
+
+### Envelope(mcpmailx.php)
+
+    echo "First, Last, Department, Location, Effective Date, Employment Status" | mail -q subject.txt -s "Employee Status Update" -r "MCP SambaTV<noreply@samba.tv>"  -S replyto="Rodney<rodney@samba.tv>" rodney@samba.tv
+    
+### Crontab
+
+    yum install php-cli
+    crontab -e
+read file directory
+
+    readlink -f test.php
+    /home/automan/mcpmailx.php
+    crontab -e 
+    0 0 * * * cd /home/automan/; ./mcpmailx.php
+    0 */2 * * * = At minute 0 past every 2nd hour
+    
+    or
+    
+    0 0 * * * php /var/www/vhosts/domain.com/httpdocs/scripts/example.php 
+This will execute every day at midnight. 
+
+
+    
 
 
