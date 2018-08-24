@@ -102,11 +102,16 @@ change from a read-only chmod 777 subject.txt
 
     yum install php-cli
     crontab -e
+    install lynx
+    
+    * * * * * curl -o /home/automan/converter.html example.com && lynx --dump ./converter.html > subject.txt links -dump ./converter.html  && cd /home/automan/; ./mcpmailx.php
 read file directory
 
     readlink -f test.php
     /home/automan/mcpmailx.php
     crontab -e 
+    
+    
     0 0 * * * cd /home/automan/; ./mcpmailx.php
     0 */2 * * * = At minute 0 past every 2nd hour
     
